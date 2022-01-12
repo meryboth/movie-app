@@ -1,0 +1,30 @@
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.top {
+    display: flex;
+}
+
+.top > img {
+    margin: 0.5rem;
+}
+
+.form {
+    display: grid;
+}
+
+input{
+    
+}
+button {
+    margin-top: 0.2rem;
+}
