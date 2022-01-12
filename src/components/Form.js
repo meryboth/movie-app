@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 export default function Form(){
     const[query, setQuery] = React.useState('');
@@ -34,10 +35,8 @@ export default function Form(){
             <button type="submit">Search</button>
         </form>
         <div className="cast-list">
-            {movies.map(movie => (
-                <div className="card" key={movie.id}>
-                <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt={movie.title + "poster"} />
-                </div>
+            {movies.filter(movie => movie.poster_path).map(movie => (
+                <Card movie={movie} key={movie.id}/>
             ))}
         </div>
         </>
