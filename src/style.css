@@ -13,12 +13,14 @@ body {
     align-items: center;
 }
 
-.container {
+.container{
     display: grid;
+    margin: 0 auto;
 }
 
 .top {
     display: flex;
+    margin: 0 auto;
 }
 
 .top > img {
@@ -29,10 +31,28 @@ body {
     font-size: 4.4rem;
 }
 .form {
+    margin: 0 auto;
     display: grid;
-    width: 100%;
+    width: 800px;
 }
 
+@media(max-width: 912px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .form {
+        width: 80%;
+    }
+}
+
+@media(max-width: 660px) {
+    .title{
+        font-size: 2rem;
+    }
+    
+}
 p {
     font-size: 1.6rem;
 }
@@ -76,13 +96,20 @@ button:hover {
 
 }
 
+.cast-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card {
+    width: 200px;
     padding: 2rem 4rem;
     border-radius: 10px;
     box-shadow: 1px 1px 5px (0, 0, 0, 0.5);
     background-color: white;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
